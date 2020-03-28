@@ -52,7 +52,7 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->role }}</td>
                     <td><a href="{{action('admin\UserController@edit',$user->id)}}" class="btn-sm btn-outline-info"><div class="fas fa-edit"></div></a></td>
-                    
+                    <td><a href="{{action('admin\UserController@destroy',$user->id)}}" class="btn-sm btn-outline-danger"><div class="fas fa-trash"></div></a></td>
                     </tr>
 
                   @endforeach

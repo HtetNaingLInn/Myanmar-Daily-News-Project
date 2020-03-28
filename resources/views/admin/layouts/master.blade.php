@@ -38,7 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <i class="fab fa-neos ml-3"></i>
-      <span class="brand-text font-weight-light">Admin Pannel</span>
+      <span class="brand-text font-weight-light">User Pannel</span>
     </a>
 
     <!-- Sidebar -->
@@ -56,11 +56,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
 
       <!-- Sidebar Menu -->
+      
       <nav class="mt-2">
+        
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+              
           <li class="nav-item has-treeview menu-open">
+           
           <a href="{{url('/')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt text-success"></i>
               <p>
@@ -70,8 +74,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
 
+             
               @can('isAdmin')
-                
               
               <li class="nav-item">
               <a href="{{url('admin/category')}}" class="nav-link ">

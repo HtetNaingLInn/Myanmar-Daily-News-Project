@@ -66,6 +66,7 @@ Route::group(['middleware' => ['can:isAdmin']], function () {
     Route::post('user/create','UserController@store');
     Route::get('user/{id}/edit','UserController@edit');
     Route::post('user/{id}/edit','UserController@update');
+    Route::get('user/{id}/delete','UserController@destroy');
 
 });
 

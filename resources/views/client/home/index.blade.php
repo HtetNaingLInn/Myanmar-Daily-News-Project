@@ -40,7 +40,7 @@
     <hr>
 
     <!-- START THE FEATURETTES -->
-    @foreach ($posts as $post)
+    @forelse ($posts as $post)
         
     
     <hr class="featurette-divider">
@@ -57,7 +57,11 @@
     </div>
 
     <hr class="featurette-divider">
-    @endforeach
+
+    @empty
+
+    <h2 class="text-center text-danger">No Post For You search</h2>
+    @endforelse
     <div class="col-md-12 pagination justify-content-center">
       {{ $posts->links() }}
     </div>
