@@ -35,14 +35,19 @@ Route::get('test/{id}','TestController@index');
 
 
 Route::get('category/{id}','CategoryController@index');
+Route::get('viewdetail/{id}','PageController@show');
 
 
-
+Route::group(['middleware' => 'auth'], function () {
+    
+    Route::post('comment/create','CommentController@store');
+});
 
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'], function () {
     
    Route::view('/', 'admin.layouts.master');
+
     
     // Posts Routes (Crud) 
 
@@ -77,10 +82,11 @@ Route::group(['middleware' => ['can:isAdminOrCon']], function () {
     Route::get('post','PostController@index');
     Route::get('post/create','PostController@create');
     Route::post('post/create','PostController@store');
-    Route::get('post/{id}/show','PostController@show');
     Route::get('post/{id}/edit','PostController@edit');
     Route::post('post/{id}/edit','PostController@update');
     Route::get('post/{id}/delete','PostController@destroy');
+    Route::get('post/{id}/detail','PostController@detail');
+    
 
 });
 

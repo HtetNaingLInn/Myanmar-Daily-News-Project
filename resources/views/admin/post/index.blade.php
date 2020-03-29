@@ -46,7 +46,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="float-right">
-                    <a href="" class="btn-sm btn-info"><div class="fas fa-eye"></div></a>
+                    <a href="{{action('admin\PostController@detail',$post->id)}}" class="btn-sm btn-info"><div class="fas fa-eye"></div></a>
                     <a href="{{action('admin\PostController@edit',$post->id)}}" class="btn-sm btn-success"><div class="fas fa-edit"></div></a>
                     <a href="{{action('admin\PostController@destroy',$post->id)}}" class="btn-sm btn-danger"><div class="fas fa-trash"></div></a>
                     </div>

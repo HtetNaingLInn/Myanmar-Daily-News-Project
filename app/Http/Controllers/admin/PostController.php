@@ -125,4 +125,12 @@ class PostController extends Controller
         Post::destroy($id);
         return \redirect('admin/post')->with('status','Deleted Successfully');
     }
+
+    public function detail($id)
+    {
+       $post=Post::findOrfail($id);
+
+       return view('admin.post.detail',compact('post'));
+       
+    }
 }

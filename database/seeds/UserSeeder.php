@@ -18,6 +18,9 @@ class UserSeeder extends Seeder
             ['name'=>'Htet Naing Linn','email' => 'htetnainglinn143@gmail.com', 'role' => 'Admin'],
             ['name'=>'Aung Gyi','email' => 'aungaung@gmail.com', 'role' => 'Content Writer'],
             ['name'=>'Bo BoTaw','email' => 'bobo@gmail.com', 'role' => 'guest'],
+            ['name'=>'Hla Hla','email' => 'hlahla@gmail.com', 'role' => 'guest'],
+            ['name'=>'Mya Mya','email' => 'myamya@gmail.com', 'role' => 'guest'],
+
         ];
 
         foreach($users as $u) {

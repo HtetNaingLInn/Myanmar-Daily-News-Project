@@ -18,9 +18,9 @@ class PageController extends Controller
     
     {    
        if(\request('search')){
-            $posts=Post::where('title','like','%'.\request('search').'%')->orderby('id','desc')->paginate(7);
+            $posts=Post::where('title','like','%'.\request('search').'%')->orderby('id','desc')->paginate(10);
        }else{
-             $posts=Post::orderby('id','desc')->paginate(7);
+             $posts=Post::orderby('id','desc')->paginate(10);
        }
 
         $cats=Category::all();
@@ -59,7 +59,12 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $cats=Category::all();
+       
+        $post=Post::findOrfail($id);
+        $comments =$post->comment;
+
+        return view('client.view_detail',compact('post','cats','comments'));
     }
 
     /**

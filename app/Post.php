@@ -18,4 +18,8 @@ class Post extends Model
     {
         return $this->belongsTo('App\Category','category_id','id');
     }
+
+    public function comment(){
+        return $this->morphMany('App\comment','commendable');
+    }
 }

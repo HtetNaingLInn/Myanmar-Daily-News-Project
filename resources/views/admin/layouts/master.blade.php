@@ -36,7 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
+  <a href="{{url('/')}}" class="brand-link">
       <i class="fab fa-neos ml-3"></i>
       <span class="brand-text font-weight-light">User Pannel</span>
     </a>
@@ -151,6 +151,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Main Footer -->
   <footer class="main-footer">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy;Myanmar.Daily.News. &middot; <a href="#">Privacy</a> &middot; <a href="#">Powered By HNL</a></p>
+  
   </footer>
 </div>
 <!-- ./wrapper -->

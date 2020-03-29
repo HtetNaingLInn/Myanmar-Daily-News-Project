@@ -48,7 +48,7 @@
       <div class="col-md-7 order">
       <h2 class="featurette-heading">{{$post->title}}</h2>
       <p class="lead">{{Str::limit($post->description,'250')}}</p>
-        <button class="btn btn-primary">View Details</button>
+      <a href="{{action('PageController@show',$post->id)}}"><button class="btn btn-primary">View Details</button></a>
       </div>
       <div class="col-md-5">
         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
